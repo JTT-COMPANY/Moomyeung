@@ -32,3 +32,8 @@ app.get('/main', function(요청, 응답){
              , {title : "어제의 일기", contents : "어제 잘 먹고 잘 잤다", id : "장지은", inputDt : 2023/07/30}]
     응답.render('main.ejs', {diaryList : 결과});
 });
+
+/* mypage 레이아웃 구현 목적으로 임시로 연결했습니다. (지은) */
+app.get('/mypage', function(요청, 응답){
+    응답.render('mypage.ejs', {});
+});
