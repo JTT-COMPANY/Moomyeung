@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- todo 메타태그 추가 -->
+  <meta name="description" content="아무에게도 나눌 수 없는 이야기들, 먼 우주로 날려보내세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="무명일기">
+  <meta property="og:description" content="아무에게도 나눌 수 없는 이야기들, 먼 우주로 날려보내세요.">
+  <meta property="og:image" content=""><!-- todo 이미지 추가 -->
+  <meta property="og:url" content=""><!-- todo 도메인 추가 -->
   <title>무명</title>
   <link rel="stylesheet" href="public/css/main.css">
   <script src="https://kit.fontawesome.com/f495bea5f2.js" crossorigin="anonymous"></script>
@@ -14,7 +19,8 @@
 <body>
   <header>
     <a href="#">
-      <p>無<span>무</span></p><p><span>명</span>名</p>
+      <p>無<span>무</span></p>
+      <p><span>명</span>名</p>
     </a>
     <nav>
       <ul>
@@ -26,8 +32,12 @@
   </header>
   <main>
     <section>
-      <article class="diaryContents"><%= diaryList[0].title %></article><!-- todo 임의로 넣음 다음에 수정해주세요(희영) -->
+      <article class="diaryContents">
+        <%= diaryList[0].title %>
+      </article><!-- todo 임의로 넣음 다음에 수정해주세요(희영) -->
+
       <article class="diaryContents">내용2</article>
+      
       <article class="diaryContents">내용3</article>
     </section>
     <button><i class="fa-solid fa-share"></i></button>
