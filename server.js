@@ -10,7 +10,7 @@ const app = express();
  * express 라이브러리 깔면 자동으로 
  * */
 const bodyParser = require('body-parser');
-app.use(express.urlencoded({extended: true})); 
+app.use(express.urlencoded({ extended: true }));
 
 /** EJS 사용하기(서버 데이터를 html에 쉽게 넣을 수 있게 도와주는 html렌더링 엔진) */
 app.set('view engine', 'ejs');
@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
 /* 8080포트에서 서버 실행 */
-app.listen(8080, function(){
+app.listen(8080, function () {
     console.log('listening on 8080');
 });
 
@@ -27,13 +27,18 @@ app.listen(8080, function(){
  * localhost:8080/main 으로 접속 시 main.ejs에 diaryList를 담아서 보내 줌
  * ejs 파일 내 <%= diaryList[0].title %> 형식으로 사용 가능
  */
-app.get('/main', function(요청, 응답){
-    let 결과 = [{title : "오늘의 일기", contents : "오늘도 잘 먹고 잘 잤다", id : "장지은", inputDt : 2023/07/31}
-             , {title : "어제의 일기", contents : "어제 잘 먹고 잘 잤다", id : "장지은", inputDt : 2023/07/30}]
-    응답.render('main.ejs', {diaryList : 결과});
+app.get('/main', function (요청, 응답) {
+    let 결과 = [{ title: "오늘의 일기", contents: "오늘도 잘 먹고 잘 잤다", id: "장지은", inputDt: "2023/07/31" }
+        , { title: "어제의 일기", contents: "어제 잘 먹고 잘 잤다", id: "장지은", inputDt: "2023/07/30" }]
+    응답.render('main.ejs', { diaryList: 결과 });
 });
 
 /* mypage 레이아웃 구현 목적으로 임시로 연결했습니다. (지은) */
-app.get('/mypage', function(요청, 응답){
+app.get('/mypage', function (요청, 응답) {
     응답.render('mypage.ejs', {});
+});
+
+/* intro 레이아웃 구현 목적으로 임시로 연결했습니다. (수연) */
+app.get('/intro', function (요청, 응답) {
+    응답.render('intro.ejs', {});
 });
