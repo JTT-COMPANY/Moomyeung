@@ -76,7 +76,7 @@ section {
 	position: relative;
 	width: 90%;
 	height: 40rem;
-	margin: 0 auto;
+	margin: 0 auto 3rem;
 }
 
 article {
@@ -122,7 +122,7 @@ article.thirdBox {
 	line-height: 2rem;
 	text-align: justify;
 	word-break: break-all;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .contentxBox ul {
@@ -146,6 +146,7 @@ button {
 	border: none;
 	font-size: 3rem;
 	color: #eee;
+	cursor: pointer;
 }
 
 footer {
@@ -173,13 +174,17 @@ footer p {
 	font-size: 1.2rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1180px) {
 	body {
 		font-size: 1.8rem;
 	}
 
+	header, footer {
+		font-size: 1.6rem;
+	}
+
 	header a img {
-		width: 15rem;
+		width: 14rem;
 	}
 
 	.contentxBox ul {
@@ -221,7 +226,7 @@ footer p {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1181px) {
 	body {
 		font-size: 2rem;
 	}
