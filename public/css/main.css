@@ -132,12 +132,12 @@ article.thirdBox {
 }
 
 .contentxBox ul li {
-	padding: 0 0.5rem;
+	padding: 0 1rem;
 }
 
 button {
 	position: absolute;
-	bottom: -1rem;
+	bottom: -4rem;
 	right: 1rem;
 	transform: rotate(180deg);
 	background-color: transparent;
@@ -159,7 +159,7 @@ footer ul {
 }
 
 footer ul li {
-	padding: 0 1rem;
+	padding: 0 1.5rem;
 	border-right: 1px solid #eee;
 }
 
