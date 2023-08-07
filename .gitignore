@@ -3,3 +3,6 @@ node_modules/*
 
 # DS_Store 무시
 *.DS_Store
+
+# env 무시
+.env
