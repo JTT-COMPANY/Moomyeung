@@ -20,6 +20,8 @@ app.set('view engine', 'ejs');
 /** app.use 요청과 응답 사이에 동작 미들웨어, static 파일을 보관하기 위해  public 파일을 쓸 거야 */
 app.use('/public', express.static('public'));
 
+const comUtils = require('./utils/comUtils.js');
+
 /* 서버 실행 */
 app.listen(process.env.PORT, function () {
     console.log('listening on 8080');
@@ -43,13 +45,16 @@ connection.connect(function(err){
     console.log('연결완료');
 });
 
+
 /* 테스트 쿼리 */
 connection.query('SELECT * FROM USER', function(에러, 결과, 필드){
     if(에러){ console.log(에러)}
+
     console.log('result : ', 결과 );
+    console.log(comUtils.changeSnakeToCamel('APPLE_LIKE'));
 });
 
 /* 해당 경로 진입 시 각 router 미들웨어 적용 */
- app.use('/main', require('./routes/main.js'));
- app.use('/mypage', require('./routes/mypage.js'));
- app.use('/intro', require('./routes/intro.js'));
+ app.use('/main', require('./routes/routerMain.js'));
+ app.use('/mypage', require('./routes/routerMypage.js'));
+ app.use('/intro', require('./routes/routerIntro.js'));
