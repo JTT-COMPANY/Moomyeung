@@ -3,38 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>무명일기</title>
-    <link rel="stylesheet" href="../public/css/intro.css">
+    <meta name="description" content="아무에게도 나눌 수 없는 이야기들, 먼 우주로 날려보내세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="무명일기">
+    <meta property="og:description" content="아무에게도 나눌 수 없는 이야기들, 먼 우주로 날려보내세요.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <title>무명일기 - 로그인</title>
+    <link rel="stylesheet" href="public/css/intro.css">
+    <link rel="stylesheet" href="public/css/footer.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="mainLeft">
-            <img src="../public/img/moon.png" alt="달사진">
-        </div>
-        <div class="mainRight">
-            <h1 class="a11y-hidden">무명일기</h1>
-            <div class="introText">
-                <p>아무에게도 나눌 수 없는 이야기들,</p>
-                <p>먼 우주로 날려보내세요.</p>
-                <img src="../public/img/moomyeung_logo.png" alt="무명">
+    <div id="mainBox">
+        <main>
+            <h2>아무에게도 나눌 수 없는 이야기들,<br>먼 우주로 날려보내세요.</h2>
+            <div><img src="../public/img/screenshot.png" alt="컨텐츠 스크린샷"></div>
+        </main>
+        <form>
+            <div>
+                <a href="/main"><img src="../public/img/logo.png" alt="무명일기"></a>
             </div>
-
-            <input type="text" placeholder="아이디">
-            <input type="password" placeholder="비밀번호">
-            <label><input type="checkbox">로그인 상태 유지</label>
-            <button type="button">로그인</button>
-            <a href="#">회원가입</a>
-            <a href="#">아이디・비밀번호 찾기</a>
-            <ul>
-                <li><button type="button">카카오 계정으로 로그인</button></li>
-                <li><button type="button">네이버 계정으로 로그인</button></li>
-                <li><button type="button">구글 계정으로 로그인</button></li>
+            <input type="email" id="useEmail" placeholder="이메일">
+            <input type="email" id="usePassword" placeholder="비밀번호">
+            <button id="signUp">로그인</button>
+            <ul class="borderNav">
+                <li>
+                    <a href="#">회원가입</a>
+                </li>
+                <li>
+                    <a href="#">비밀번호 찾기</a>
+                </li>
             </ul>
-        </div>
+            <p>또는</p>
+            <ul id="loginAPI">
+                <li>
+                    <img src="../public/img/iconNaver.png" alt="네이버 아이콘" id="logoNaver">
+                    <button id="loginNaver">네이버 계정으로 로그인</button>
+                </li>
+                <li>
+                    <img src="../public/img/iconKakao.png" alt="카카오 아이콘">
+                    <button id="loginKakao">카카오 계정으로 로그인</button>
+                </li>
+                <li>
+                    <img src="../public/img/iconGoogle.png" alt="구글 아이콘">
+                    <button id="loginGoogle">구글 계정으로 로그인</button>
+                </li>
+            </ul>
+        </form>
     </div>
+    <%- include('footer.ejs') %>
 </body>
 
 </html>
