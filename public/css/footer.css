@@ -1,0 +1,23 @@
+footer {
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    padding: 10rem 0 5rem;
+}
+
+footer ul li {
+    display: inline-block;
+    height: 1.6rem;
+    padding: 0 2rem;
+    margin-bottom: 0.8rem;
+}
+
+footer ul li:first-child {
+    border-right: 1px solid #f9f9f9;
+    cursor: pointer;
+}
+
+footer > p {
+    height: 1.6rem;
+}
