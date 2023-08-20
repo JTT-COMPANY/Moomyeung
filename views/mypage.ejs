@@ -12,137 +12,118 @@
     <meta property="og:image" content=""><!-- todo 이미지 추가 -->
     <meta property="og:url" content=""><!-- todo 도메인 추가 -->
     <title>마이페이지 | 무명</title>
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/header.css">
     <link rel="stylesheet" href="public/css/mypage.css">
+    <link rel="stylesheet" href="public/css/footer.css">
     <script src="https://kit.fontawesome.com/f495bea5f2.js" crossorigin="anonymous"></script>
     <script defer src="public/js/mypage.js"></script>
 </head>
 
 <body>
+
     <div class="wrapper">
-        <header>
-            <h1><img src="../public/img/moomyeung_logo.png" alt="무명"></h1>
-            <a class="home" href="/main">홈으로</a>
-            <a class="logout" href="/intro">로그아웃</a>
-        </header>
-        <main class="mypageBox">
-            <div class="myInfo">
-                <h2>내 정보</h2>
-                <p>닉네임 : ㅇㅇㅇ</p>
-                보유 공감⭐️ : <span id="haveStar">28</span>
-            </div>
-            <div class="myComent">
-                <h2>내가 쓴 댓글</h2>
+        <%- include('header.ejs') %>
+            <div class="mypage">
+                <h2>마이페이지</h2>
+                <main class="mypageMainBox">
+                    <div class="mypageMainLeft">
+                        <div id="infoBox">
+                            <div id="myInfo">
+                                <h3>내 정보</h3>
+                                <p id="userName">닉네임 : ㅇㅇㅇ</p>
+                                <p>내 공감별 : <span id="haveStar">28</span>★</p>
+                                <p id="joinDate">가입일 : 0000년 00월 00일</p>
+                            </div>
+                            <button type="button" id="setting">
+                                <h3 class="setText">설정</h3>
+                            </button>
+                            <button type="button" id="mypageNotice">
+                                <h3 class="setText">공지사항/문의</h3>
+                            </button>
+                        </div>
+                        <div id="myDiary">
+                            <h3>내가 쓴 일기</h3>
+                            <ul id="diaryList">
+                                <li>
+                                    <a href="#">
+                                        <h4>제목 : 내가 쓴 일기 제목입니다.</h4>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h4>제목 : 내가 쓴 일기 제목입니다.</h4>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h4>제목 : 내가 쓴 일기 제목입니다.</h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="myComent">
+                            <h3>내가 쓴 댓글</h3>
+                            <ul id="commentList">
+                                <li>
+                                    <a href="#">
+                                        <p>내가 남긴 댓글입니다.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>내가 남긴 댓글입니다.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>내가 남긴 댓글입니다.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="cheerDiary">
+                            <h3>내가 공감한 글</h3>
+                            <ul id="cheerDiaryList">
+                                <li>
+                                    <a href="#">
+                                        <h4>제목 : 내가 공감한 글 제목입니다.</h4>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h4>제목 : 내가 공감한 글 제목입니다.</h4>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h4>제목 : 내가 공감한 글 제목입니다.</h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="cheerComment">
+                            <h3>내가 공감한 댓글</h3>
+                            <ul id="cheerCommentList">
+                                <li>
+                                    <p>내가 공감한 댓글입니다.</p>
+                                </li>
+                                <li>
+                                    <p>내가 공감한 댓글입니다.</p>
+                                </li>
+                                <li>
+                                    <p>내가 공감한 댓글입니다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mypageMainRight">
+                        <div id="board"></div>
+                    </div>
 
-                <ul>
-                    <li>
-                        <p>오늘도 날씨가 너무 덥습니다!!</p>
-                    </li>
-                    <li>
-                        <p>우리는 모두 대!!!!!!개발자가 될거에요.</p>
-                    </li>
-                    <li>
-                        <p>익명일기 생겨서 너무좋아요</p>
-                    </li>
-                </ul>
+                </main>
             </div>
-            <div class="myCheer">
-                <h2>내가 공감한 글</h2>
-
-                <ul>
-                    <li>
-                        <p>오늘도 날씨가 너무 덥습니다!!</p>
-                    </li>
-                    <li>
-                        <p>우리는 모두 대!!!!!!개발자가 될거에요.</p>
-                    </li>
-                    <li>
-                        <p>익명일기 생겨서 너무좋아요</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="myNotice">
-                <h2>공지사항 및 알림</h2>
-                <ul>
-                    <li>
-                        <p>오늘 오후 9시 회의</p>
-                    </li>
-                    <li>
-                        <p>마실 것 챙겨서 참석하기</p>
-                    </li>
-                    <li>
-                        <p>28명이 ooo님의 글에 공감했어요!</p>
-                    </li>
-                </ul>
-            </div>
-            <button type="button" class="setting">
-                <h2 class="setText">settings</h2>
-            </button>
-            <div class="myDiary">
-                <h2>내가 쓴 일기</h2>
-
-                <ul class="diaryList">
-                    <li>
-                        <a href="#">
-                            <article>
-                                <h3>제목 : 아리는 편식쟁이</h3>
-                                <p>아리한테 고기 간식을 많이 먹였어요. 그래서 아리가 편식을 시작했습니다. 이제 아리는 사과를 먹지 않아요...</p>
-                            </article>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <article>
-                                <h3>제목 : 아리는 똥쟁이</h3>
-                                <p>아리는 똥을 배편패드에 쌀 줄 모릅니다. 아무곳에나 변을 흘리고 다니는데요.... 문제는 한 곳에 흘리는게 아니라 돌아다니면서 흘립니다^^... 그리고
-                                    가끔은 동구녕에 달고다녀요ㅎ</p>
-                            </article>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <article>
-                                <h3>제목 : 아리는 영악해</h3>
-                                <p>배편패드에 오줌을 잘 싸게 만드려고 배변패드에 오줌을 쌀 때마다 간식을 줬습니다. 그런데!!! 영악한 아리는.. 사람이 볼 때만 배변패드에 오줌을 싸는
-                                    강아지가 되었어요..^^ 그리고 간식달라고 찾아온답니다... 영악한 자식...</p>
-                            </article>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <article>
-                                <h3>제목 : 아리는 영악해</h3>
-                                <p>배편패드에 오줌을 잘 싸게 만드려고 배변패드에 오줌을 쌀 때마다 간식을 줬습니다. 그런데!!! 영악한 아리는.. 사람이 볼 때만 배변패드에 오줌을 싸는
-                                    강아지가 되었어요..^^ 그리고
-                                    간식달라고 찾아온답니다... 영악한 자식...</p>
-                            </article>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <article>
-                                <h3>제목 : 아리는 영악해</h3>
-                                <p>배편패드에 오줌을 잘 싸게 만드려고 배변패드에 오줌을 쌀 때마다 간식을 줬습니다. 그런데!!! 영악한 아리는.. 사람이 볼 때만 배변패드에 오줌을 싸는
-                                    강아지가 되었어요..^^ 그리고
-                                    간식달라고 찾아온답니다... 영악한 자식...</p>
-                            </article>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <article>
-                                <h3>제목 : 아리는 영악해</h3>
-                                <p>배편패드에 오줌을 잘 싸게 만드려고 배변패드에 오줌을 쌀 때마다 간식을 줬습니다. 그런데!!! 영악한 아리는.. 사람이 볼 때만 배변패드에 오줌을 싸는
-                                    강아지가 되었어요..^^ 그리고
-                                    간식달라고 찾아온답니다... 영악한 자식...</p>
-                            </article>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </main>
-        <footer>contact</footer>
+            <%- include('footer.ejs') %>
     </div>
 
 </body>

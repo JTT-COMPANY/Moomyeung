@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+}
+
+header {
+    max-width: 1440px;
+    height: 11rem;
+    padding: 3rem;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #f9f9f9;
+}
+
+header>h1>img {
+    width: 11rem;
+    height: 11rem;
+}
+
+header .headerLink img {
+    width: 3rem;
+    vertical-align: middle;
+    padding-bottom: 0.2rem;
+}
+
+header .headerLink a {
+    margin-left: 2rem;
+}
+
+#logout {
+    padding-left: 2rem;
+    border-left: 1px solid #f9f9f9;
+}
