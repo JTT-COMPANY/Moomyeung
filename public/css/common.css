@@ -5,6 +5,10 @@
 	font-style: normal;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -16,32 +20,25 @@ a {
 	cursor: pointer;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
 	list-style-type: none;
 }
 
 body {
-	font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;
 	background-color: #1e2026;
-	color: #eee;
+	font-family: 'Pretendard-Regular', system-ui, Roboto, sans-serif;
+	font-size: 1.5rem;
 }
 
-header {
-	width: 100vw;
-	height: 100px;
-	position: relative;
-}
-
-header>a {
-	position: absolute;
-	top: 5vh;
-	left: 5vw;
-	z-index: 10;
-}
-
+header,
 footer {
-	position: absolute;
-	bottom: 1vh;
-	left: 50vw;
-	transform: translateX(-50%);
+	color: #f9f9f9;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	background: none;
 }
